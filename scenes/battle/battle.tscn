@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1wkge2sevvbs"]
+[gd_scene load_steps=10 format=3 uid="uid://b1wkge2sevvbs"]
 
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_6wct1"]
 [ext_resource type="Script" path="res://scenes/ui/hand.gd" id="2_2iuk6"]
 [ext_resource type="PackedScene" uid="uid://csvclx4u618yi" path="res://scenes/card_ui/card_ui.tscn" id="2_ky5xf"]
+[ext_resource type="PackedScene" uid="uid://t73lqcra6sxf" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_3ne7t"]
+[ext_resource type="Texture2D" uid="uid://cdd3yvugurcea" path="res://art/enemies/gorilla.png" id="4_fof1u"]
+[ext_resource type="Resource" uid="uid://dfuj4ovp7vsjx" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="5_l3vg6"]
+[ext_resource type="Resource" uid="uid://hkmt2ctt8el4" path="res://characters/warrior/cards/warrior_block.tres" id="6_00uis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shb2v"]
 size = Vector2(256, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8unbl"]
+size = Vector2(38, 36)
 
 [node name="Battle" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -13,6 +20,7 @@ metadata/_edit_lock_ = true
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.509804, 0.509804, 0.509804, 1)
 position = Vector2(128, 72)
+scale = Vector2(0.25, 0.273245)
 texture = ExtResource("1_6wct1")
 
 [node name="CardDropArea" type="Area2D" parent="."]
@@ -21,6 +29,22 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
 position = Vector2(128, 50)
 shape = SubResource("RectangleShape2D_shb2v")
+debug_color = Color(0, 0.6, 0.701961, 0.0627451)
+
+[node name="Enemy" type="Area2D" parent="."]
+position = Vector2(0, 3)
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+position = Vector2(133, 53)
+scale = Vector2(0.327381, 0.316176)
+texture = ExtResource("4_fof1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(133, 56)
+shape = SubResource("RectangleShape2D_8unbl")
+
+[node name="card_target_selector" parent="." instance=ExtResource("3_3ne7t")]
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 
@@ -40,9 +64,12 @@ script = ExtResource("2_2iuk6")
 
 [node name="CardUI" parent="BattleUI/Hand" instance=ExtResource("2_ky5xf")]
 layout_mode = 2
+card = ExtResource("5_l3vg6")
 
 [node name="CardUI2" parent="BattleUI/Hand" instance=ExtResource("2_ky5xf")]
 layout_mode = 2
+card = ExtResource("5_l3vg6")
 
 [node name="CardUI3" parent="BattleUI/Hand" instance=ExtResource("2_ky5xf")]
 layout_mode = 2
+card = ExtResource("6_00uis")
