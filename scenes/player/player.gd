@@ -4,8 +4,9 @@ extends Node2D
 
 @export var stats: CharacterStats : set = set_character_stats
 
-@onready var sprite_2d: Sprite2D = $Sprite2D
-@onready var stats_ui: StatsUI = $StatsUI as StatsUI
+@onready var sprite_2d: Sprite2D = %PlayerSprite
+@onready var stats_ui: StatsUI = %PlayerStats as StatsUI
+@onready var animation_player = $AnimationPlayer
 
 
 	
@@ -30,6 +31,7 @@ func update_stats() -> void:
 	stats_ui.update_stats(stats)
 	
 func take_damage(damage: int) -> void:
+	animation_player.play("screen_shake")
 	if stats.health <= 0:
 		return
 	stats.take_damage(damage)
