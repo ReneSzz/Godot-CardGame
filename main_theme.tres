@@ -1,7 +1,79 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dauhwjcnpl6ty"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dauhwjcnpl6ty"]
 
 [ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://art/pixel_rpg.ttf" id="1_c37c3"]
+[ext_resource type="StyleBox" uid="uid://c8s663ab2rwg8" path="res://scenes/card_ui/card_base_stylebox.tres" id="1_m7mu2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfd60"]
+bg_color = Color(1, 0.996078, 0.992157, 0.427451)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bwaj1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64j2l"]
+bg_color = Color(0.513726, 0.513726, 0.513726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.988235, 0.988235, 0.988235, 1)
+shadow_color = Color(0.992157, 0.992157, 0.992157, 0.517647)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3c4q"]
+bg_color = Color(0.513726, 0.513726, 0.513726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xm1q"]
+bg_color = Color(1, 1, 1, 0.196078)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 0.219608)
+shadow_color = Color(0.992157, 0.992157, 0.992157, 0.517647)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py360"]
+bg_color = Color(0.941176, 0.12549, 0.113725, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 
 [resource]
 default_font = ExtResource("1_c37c3")
 default_font_size = 6
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 1)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 6
+Button/fonts/font = ExtResource("1_c37c3")
+Button/styles/disabled = SubResource("StyleBoxFlat_nfd60")
+Button/styles/focus = SubResource("StyleBoxEmpty_bwaj1")
+Button/styles/hover = SubResource("StyleBoxFlat_64j2l")
+Button/styles/normal = SubResource("StyleBoxFlat_y3c4q")
+Button/styles/pressed = SubResource("StyleBoxFlat_8xm1q")
+Panel/styles/panel = SubResource("StyleBoxFlat_py360")
+PanelContainer/styles/panel = ExtResource("1_m7mu2")

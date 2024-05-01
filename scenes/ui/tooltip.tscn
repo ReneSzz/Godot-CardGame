@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4eivd5k8q6yv"]
+
+[ext_resource type="Theme" uid="uid://dauhwjcnpl6ty" path="res://main_theme.tres" id="1_41cnd"]
+[ext_resource type="Texture2D" uid="uid://dlmmijspgsvxm" path="res://art/effect_attack/fireball.png" id="2_35e0o"]
+[ext_resource type="Script" path="res://scenes/ui/tooltip.gd" id="2_iyu51"]
+
+[node name="Tooltip" type="PanelContainer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -32.0
+offset_right = -9.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_41cnd")
+script = ExtResource("2_iyu51")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TooltipIcon" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+texture = ExtResource("2_35e0o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TooltipText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/line_separation = 2
+bbcode_enabled = true
+text = "Tooltip description
+Tooltip description
+
+"

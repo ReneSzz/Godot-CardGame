@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://hkmt2ctt8el4"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://hkmt2ctt8el4"]
 
-[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_m12h8"]
+[ext_resource type="Texture2D" uid="uid://cmdagskntb4y7" path="res://art/effect_attack/fireshield.png" id="1_go4wq"]
+[ext_resource type="Script" path="res://characters/warrior/cards/warrior_block.gd" id="2_glude"]
 
 [resource]
-script = ExtResource("1_m12h8")
+script = ExtResource("2_glude")
 id = "warrior_block"
 type = 1
 target = 0
+cost = 1
+icon = ExtResource("1_go4wq")
+tooltip_text = "[center]Gain [color=\"4080B7\"]5 [/color] block.[/center]"

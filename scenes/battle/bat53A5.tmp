@@ -1,13 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://b1wkge2sevvbs"]
+[gd_scene load_steps=15 format=3 uid="uid://b1wkge2sevvbs"]
 
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_6wct1"]
 [ext_resource type="Script" path="res://scenes/battle/battle.gd" id="1_nl84v"]
 [ext_resource type="Script" path="res://scenes/ui/hand.gd" id="2_2iuk6"]
 [ext_resource type="PackedScene" uid="uid://c1pxblaryfdc7" path="res://scenes/enemy/enemy.tscn" id="2_kbumu"]
 [ext_resource type="PackedScene" uid="uid://t73lqcra6sxf" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_3ne7t"]
+[ext_resource type="Resource" uid="uid://bpnbg5mxh3wey" path="res://enemies/gorilla/test_enemy.tres" id="3_4c7u7"]
 [ext_resource type="PackedScene" uid="uid://tdm8rlafmasf" path="res://scenes/player/player.tscn" id="4_dafk7"]
-[ext_resource type="Script" path="res://scenes/enemy/enemy_handler.gd" id="4_xejc0"]
-[ext_resource type="Resource" uid="uid://fx2tsvbw5x87" path="res://enemies/gorilla/gorilla_enemy.tres" id="5_cru1s"]
 [ext_resource type="Resource" uid="uid://2nubtfxeloyd" path="res://characters/warrior/warrior.tres" id="5_vk35q"]
 [ext_resource type="Script" path="res://scenes/ui/battle_ui.gd" id="7_gwfms"]
 [ext_resource type="Script" path="res://scenes/player/player_handler.gd" id="8_ixgvk"]
@@ -25,8 +24,8 @@ metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.509804, 0.509804, 0.509804, 1)
-position = Vector2(129, 67)
-scale = Vector2(0.280273, 0.318786)
+position = Vector2(128, 72)
+scale = Vector2(0.25, 0.273245)
 texture = ExtResource("1_6wct1")
 
 [node name="CardDropArea" type="Area2D" parent="."]
@@ -37,12 +36,9 @@ position = Vector2(128, 50)
 shape = SubResource("RectangleShape2D_shb2v")
 debug_color = Color(0, 0.6, 0.701961, 0.0627451)
 
-[node name="EnemyHandler" type="Node2D" parent="."]
-script = ExtResource("4_xejc0")
-
-[node name="Enemy" parent="EnemyHandler" instance=ExtResource("2_kbumu")]
+[node name="Enemy" parent="." instance=ExtResource("2_kbumu")]
 position = Vector2(129, 56)
-stats = ExtResource("5_cru1s")
+stats = ExtResource("3_4c7u7")
 
 [node name="card_target_selector" parent="." instance=ExtResource("3_3ne7t")]
 

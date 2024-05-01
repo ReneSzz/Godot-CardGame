@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=4 format=3 uid="uid://2nubtfxeloyd"]
+
+[ext_resource type="Texture2D" uid="uid://cj0ycodmr7xmj" path="res://art/portraits/portrait.png" id="1_smtql"]
+[ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_vy1qh"]
+[ext_resource type="Resource" uid="uid://b2nje4xcvdjk0" path="res://characters/warrior/warrior_starting_deck.tres" id="2_weuwa"]
+
+[resource]
+script = ExtResource("1_vy1qh")
+starting_deck = ExtResource("2_weuwa")
+cards_per_turn = 4
+max_mana = 3
+max_health = 24
+art = ExtResource("1_smtql")
