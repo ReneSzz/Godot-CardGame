@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://fx2tsvbw5x87"]
 
-[ext_resource type="PackedScene" uid="uid://use2t7x1b0ju" path="res://enemies/gorilla/crab_enemy_ai.tscn" id="1_4md88"]
+[ext_resource type="PackedScene" uid="uid://use2t7x1b0ju" path="res://enemies/gorilla/gorilla_enemy_ai.tscn" id="1_4md88"]
 [ext_resource type="Texture2D" uid="uid://cdd3yvugurcea" path="res://art/enemies/gorilla.png" id="1_b22jg"]
 [ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_k05th"]
 
